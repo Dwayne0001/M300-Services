@@ -1,6 +1,8 @@
 LB2
+
 -----------------------------------------------------------------
 K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
+
     VirtualBox  (gedownloadet und installiert; erste Test-VM erstellt)
     Vagrant installiert und mit VirtualBox getestet 
     VisualStudio-Code (gedownloadet und installiert)
@@ -8,6 +10,7 @@ K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
     SSH-Key für Client erstellt (Nach Anleitung; kann durch Synchronisation getestet werden)
 ----------------------------------------
 K2: Eigene Lernumgebung ist eingerichtet
+
     Git-Hub Account ist erstellt 
     Git-Client wurde verwendet
     Dokumentation ist als MD vorhanden
@@ -20,6 +23,7 @@ K2: Eigene Lernumgebung ist eingerichtet
     Wichtige Lernschritte:
 ----
 K3:
+
     VM aus Vagrant-Cloud eingerichtet; Ubuntu Server installiert mit Apache Dienst (Bsp.)
     Git Befehle um Datei zu pushen (Nach Reihenfolge):
         git status
