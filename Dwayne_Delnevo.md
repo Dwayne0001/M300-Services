@@ -125,11 +125,10 @@ VM zerstören
 VisualStudio Code ist ein Texteditor von Microsoft.  
 Mit VisualStudio kann man ein Repository direkt öffnen und wenn man fertig ist kann man es auch gleich wieder pushen (dafür werden aber Extensions benötigt).  
 Bei der Installation von VisualStudio mussten wir für dieses Modul keine speziellen Angaben berücksichtigen; also Standardinstallation.  
-*Benötigte Extensions:*  
-
-  Markdown All in One  
-  Vagrant Extension  
-  vscode-pdf Extension  
+**Benötigte Extensions:**  
+  - Markdown All in One  
+  - Vagrant Extension  
+  - vscode-pdf Extension  
   
 Diese Extensions werden dazu benötigt damit diese Dokumentation und das Vagrant-file einfacher bearbeitet werden können.  
 Diese Extensions werden wie folgt installiert:  
