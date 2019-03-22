@@ -19,7 +19,7 @@ LB2
 ## Persönlicher Wissensstand
 **Virtualisierung**  
 Eigentlich ausschliesslich VMware Produkte verwendet; in der Schule oder gewissen üKs Workstation, im Geschäft meist ESXi. Ich habe auch schon viele interne (im Geschäft) Lehrlingsprojekte mit Virtualisierung gemacht. Im Privaten verwende ich eigentlich keine Virtualisierung.  
-Fazit: Gute Kenntnisse  
+*Fazit:* Gute Kenntnisse  
 **Vagrant**  
 Ich habe Vagrant im Modul 300 kennengelernt.  
 Fazit: Sehr neu für mich.  
