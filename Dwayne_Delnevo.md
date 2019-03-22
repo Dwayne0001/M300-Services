@@ -37,10 +37,7 @@ Ich habe Markdown im Modul 300 kennengelernt, vorhin kannte ich es nicht.
 Fazit: Sehr neu für mich.  
 
 ***
-
-
-K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
-
+## K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig  
 * Virtualbox
 ![VirtualBox](VirtualBox.PNG)
 
@@ -53,11 +50,19 @@ K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 * Git-Client  
 ![Git-Client](Git-Client.PNG)  
 
-    VirtualBox  (gedownloadet und installiert; erste Test-VM erstellt)
-    Vagrant installiert und mit VirtualBox getestet 
-    VisualStudio-Code (gedownloadet und installiert)
-    Git-Client (gedownloadet, installiert und konfiguriert)
-    SSH-Key für Client erstellt (Nach Anleitung; kann durch Synchronisation getestet werden)
+**Git**
+Nach Anleitung des M300-Repositories gemacht:
+*Github*
+  1. Auf www.github.com Benutzerkonto erstellt
+  2. Bestätigungsemail bestätigt und Anmeldung getestet.  
+
+*Repository erstellen*
+  1. "New Repository" ausgewählt
+  2. Name vergeben: M300-Services
+  3. Public gemacht
+  4. "Initialize this repository with a README" ausgewählt
+  5. "Create a repository"
+  
 ----------------------------------------
 K2: Eigene Lernumgebung ist eingerichtet
 
