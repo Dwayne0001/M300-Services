@@ -6,9 +6,10 @@
 - [Dokumentation LB2](#dokumentation-lb2)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [Persönlicher Wissensstand](#pers%C3%B6nlicher-wissensstand)
-  - [test](#test)
-  
-  - [Wissenzuwachs](#wissenzuwachs)
+  - [Umgebung](#umgebung)
+  - [Vorgefertigte VM mit Vagrant aufsetzen](#vorgefertigte-vm-mit-vagrant-aufsetzen)
+  - [Vagrant Ubuntu VM mit Firewall und Webserver](#vagrant-ubuntu-vm-mit-firewall-und-webserver)
+  - [Wissenswachstum](#wissenswachstum)
   - [Reflexion](#reflexion)
   - [Quellen](#quellen)
   
@@ -136,28 +137,16 @@ Diese Extensions werden wie folgt installiert:
   2. ExtensionMenu öffnen (Abkürzung: Ctrl+Shift+X)  
   3. Gewünschte Extension suchen und installieren  
 
-----------------------------------------
-K2: Eigene Lernumgebung ist eingerichtet
 
-    Git-Hub Account ist erstellt 
-    Git-Client wurde verwendet
-    Dokumentation ist als MD vorhanden
-    Visual Studio Code wurde als MD-Editor ausgewählt und eingerichtet
-    MD-Datei ist strukturiert
-    -------------------------
-    Persönlicher Wissenstand:
-    Vagrant: Automatisierung Virtualisierung; V:2.2.3
-    Versionen:
-    Wichtige Lernschritte:
-----
-K3:
+***
+## Wissenswachstum
+asdasd
 
-    VM aus Vagrant-Cloud eingerichtet; Ubuntu Server installiert mit Apache Dienst (Bsp.)
-    Git Befehle um Datei zu pushen (Nach Reihenfolge):
-        git status
-        git add -A
-        git status
-        git commit -m "Gewünschter Kommentar"
-        git status
-        git push
-    Vagrant-Befehle: vagrant up, vagrant ssh, vagrant destroy, vagrant init
+**Git**
+Ich habe gelernt was, Git, Repositories und Markdown sind. Wie man Repositories bearbeitet, klont und auch lokal absichert, und auch die Sprache Markdown und wie sie funktioniert.  
+Fazit: Ich kannte Git und Repositories vorher garnicht und kenne mich jetzt ziemlich gut aus. Desweiteren habe ich eine neue Sprache kennengelernt.  
+
+
+
+
+
