@@ -38,13 +38,13 @@ Fazit: Sehr neu für mich.
 
 ***
 ## K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig  
-* Virtualbox
+* Virtualbox  
 ![VirtualBox](VirtualBox.PNG)
 
 * Vagrant  
 ![Vagrant](Vagrant.PNG)  
 
-* Sublime
+* VisualStudio  
 ![VisualStudio](VisualStudio.PNG)
 
 * Git-Client  
