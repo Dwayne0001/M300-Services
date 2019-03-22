@@ -44,14 +44,14 @@ K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 * Virtualbox
 ![VirtualBox](VirtualBox.PNG)
 
-* Vagrant
-![Vagrant](Vagrant.PNG)
+* Vagrant  
+![Vagrant](Vagrant.PNG)  
 
 * Sublime
 ![VisualStudio](VisualStudio.PNG)
 
-* Git-Client
-![Git-Client](Git-Client.PNG)
+* Git-Client  
+![Git-Client](Git-Client.PNG)  
 
     VirtualBox  (gedownloadet und installiert; erste Test-VM erstellt)
     Vagrant installiert und mit VirtualBox getestet 
