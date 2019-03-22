@@ -87,7 +87,7 @@ Modulrepository:
     > git pull  
     > git status  
     
-Meinrepository:  
+Mein Repository:  
     >git clone git@github.com:Dwayne0001/M300-Services.git  
     > git pull --> Um zu aktualisieren  
     > git status --> Um  Status der lokalen Kopie anzuzeigen  
@@ -125,16 +125,16 @@ VM zerstören
 VisualStudio Code ist ein Texteditor von Microsoft.  
 Mit VisualStudio kann man ein Repository direkt öffnen und wenn man fertig ist kann man es auch gleich wieder pushen (dafür werden aber Extensions benötigt).  
 Bei der Installation von VisualStudio mussten wir für dieses Modul keine speziellen Angaben berücksichtigen; also Standardinstallation.  
-*Benötigte Extensions:*
+*Benötigte Extensions:*  
   Markdown All in One  
   Vagrant Extension  
   vscode-pdf Extension  
+  
 Diese Extensions werden dazu benötigt damit diese Dokumentation und das Vagrant-file einfacher bearbeitet werden können.  
 Diese Extensions werden wie folgt installiert:  
-  1. Extensionname googeln
-  2. VisualStudio Code öffnen
-  3. Extension vom VisualStudio Marketplace herunterladen
-  4. Marketplace wird im VisualStudio Programm geöffnet und dort dann installieren wählen
+  1. VisualStudio Code öffnen  
+  2. ExtensionMenu öffnen (Abkürzung: Ctrl+Shift+X)  
+  3. Gewünschte Extension suchen und installieren  
 
 ----------------------------------------
 K2: Eigene Lernumgebung ist eingerichtet
