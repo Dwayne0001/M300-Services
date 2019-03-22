@@ -15,6 +15,30 @@ LB2
   - [Quellen](#quellen)
   
 -----------------------------------------------------------------
+***
+## Persönlicher Wissensstand
+**Virtualisierung**
+Eigentlich ausschliesslich VMware Produkte verwendet; in der Schule oder gewissen üKs Workstation, im Geschäft meist ESXi. Ich habe auch schon viele interne (im Geschäft) Lehrlingsprojekte mit Virtualisierung gemacht. Im Privaten verwende ich eigentlich keine Virtualisierung. 
+Fazit: Gute Kenntnisse
+**Vagrant**
+Ich habe Vagrant im Modul 300 kennengelernt.
+Fazit: Sehr neu für mich.
+**Git**
+Github habe ich auch im Modul 300 kennengelernt.
+Fazit: Auch sehr neu für mich.
+**Linux**
+In der TBZ wurde Linux zwischnendurch mal verwendet. Meist kam es jedoch in üKs zu Gebrauch.
+Fazit: Nicht neu, aber auch nicht die grössten Kenntnisse.
+**Systemsicherheit**
+Ich hatte bereits ein üK welcher sich explizit mit dem beschäftigte. Des Weiteren darf ich Geschäft oft auch Firewall mit konfigurieren oder für Testingzwecke selber testen.
+Fazit: Gute Kenntnisse.
+**Markdown**
+Ich habe Markdown im Modul 300 kennengelernt, vorhin kannte ich es nicht.
+Fazit: Sehr neu für mich.
+***
+
+
+-----------------------------------------------------------------
 K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 
 * Virtualbox
