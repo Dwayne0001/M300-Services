@@ -1,6 +1,6 @@
 ***
 # Dokumentation LB2
-**Zum Moduul 300 von Dwayne Delnevo**
+**Zum Modul 300 von Dwayne Delnevo**
 ***
 ## Inhaltsverzeichnis
 - [Dokumentation LB2](#dokumentation-lb2)
@@ -88,10 +88,29 @@ Modulrepository:
     > git status  
     
 Meinrepository:  
-    >git clone git@github.com:Payreno/M300.git  
+    >git clone git@github.com:Dwayne0001/M300-Services.git  
     > git pull --> Um zu aktualisieren  
     > git status --> Um  Status der lokalen Kopie anzuzeigen  
-    
+
+**VirtualBox**  
+Mit Hilfe von VirtualBox können Virtuelle Maschinen erstellt und verwaltet werden.  
+VirtualBox ist eine Opensource-Virtualisierungssoftware.  
+Da in diesem Modul keine speziellen Einstellungen notwendig sind, kann bei der Installation einfach die Standardinstallation verwendet werden.  
+
+**Vagrant**  
+Mit Hilfe von Vagrant kann man in VirtualBox automatisiert VMs und Services installieren lassen.  
+Wie mit VirtualBox werden hier keine speziellen Einstellungen bei der Installation gebraucht, deshalb kann man die Standardinstallation verwenden.  
+
+*Wichtige Befehle*  
+
+Vagrantfile erstellen und Umgebung initialisieren  
+> vagrant init  
+
+Konfigurierung und Erstellung einer VM mit Vagrantfile  
+> vagrant up  
+
+
+
 ----------------------------------------
 K2: Eigene Lernumgebung ist eingerichtet
 
