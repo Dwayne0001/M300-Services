@@ -74,11 +74,11 @@ Nach Anleitung des M300-Repositories gemacht:
   1. Im Git Bash Termin:
     >ssh-keygen -t rsa -b 4096 -C "dwayne.delnevo@hotmail.ch"  
     >Enter a file in which to save the key (~/.ssh/id_rsa):  
-    *(Einfach Enter drücken)*
+    (Einfach Enter drücken)  
     >Enter passphrase (empty for no passphrase):  
-    *(Kennwort definieren)*  
+    (Kennwort definieren)  
     >Enter same passphrase again:  
-    *(Kennwort erneut eingeben)*  
+    (Kennwort erneut eingeben)  
    2. %HOME%/.ssh/id_rsa.pub mit Notepad öffnen und Schlüssel kopieren  
    3. Github Website öffnen und dort unter Settings/SSH den Schlüssel angebennd GPG keys angeben  
    
