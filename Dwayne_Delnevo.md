@@ -70,7 +70,7 @@ Nach Anleitung des M300-Repositories gemacht:
     >$ git config --global user.name "<dwayne0001>"  
     >$ git config --global user.email "<dwayne.delnevo@hotmail.ch>"  
 
-*SSH-Key*
+*SSH-Key*  
   1. Im Git Bash Termin:
     >ssh-keygen -t rsa -b 4096 -C "dwayne.delnevo@hotmail.ch"  
     >Enter a file in which to save the key (~/.ssh/id_rsa):  
@@ -82,14 +82,14 @@ Nach Anleitung des M300-Repositories gemacht:
    2. %HOME%/.ssh/id_rsa.pub mit Notepad öffnen und Schlüssel kopieren  
    3. Github Website öffnen und dort unter Settings/SSH den Schlüssel angebennd GPG keys angeben  
    
-*Repository klonen*  
+*Repository klonen*
   Modulrepository:  
     > git clone https://github.com/mc-b/M300  
     > cd M300  
     > git pull  
     > git status  
     
-  Meinrepo:  
+  Meinrepository:  
     >git clone git@github.com:Payreno/M300.git  
     > git pull --> Um zu aktualisieren  
     > git status --> Um  Status der lokalen Kopie anzuzeigen  
