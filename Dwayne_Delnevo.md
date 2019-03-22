@@ -51,17 +51,17 @@ Fazit: Sehr neu für mich.
 ![Git-Client](Git-Client.PNG)  
 
 **Git**
-Nach Anleitung des M300-Repositories gemacht:
-*Github*
+Nach Anleitung des M300-Repositories gemacht:  
+*Github*  
   1. Auf www.github.com Benutzerkonto erstellt
   2. Bestätigungsemail bestätigt und Anmeldung getestet.  
 
-*Repository erstellen*
+*Repository erstellen*  
   1. "New Repository" ausgewählt
   2. Name vergeben: M300-Services
   3. Public gemacht
   4. "Initialize this repository with a README" ausgewählt
-  5. "Create a repository"
+  5. "Create a repository" wählen um Erstellung fertig zu stellen.
   
 ----------------------------------------
 K2: Eigene Lernumgebung ist eingerichtet
