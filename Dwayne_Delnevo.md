@@ -5,12 +5,11 @@ LB2
 **Zum Moduul 300 von Dwayne Delnevo**
 ***
 ## Inhaltsverzeichnis
-- [Dokumentation LB 1](#dokumentation-lb-1)
+- [Dokumentation LB2](#dokumentation-lb2)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [Persönlicher Wissensstand](#pers%C3%B6nlicher-wissensstand)
-  - [Lernumgebung](#lernumgebung)
-  - [Vorgefertigte VM mit Vagrant aufsetzen](#vorgefertigte-vm-mit-vagrant-aufsetzen)
-  - [Vagrant Ubuntu VM mit Firewall und Webserver](#vagrant-ubuntu-vm-mit-firewall-und-webserver)
+  - [test](#test)
+  
   - [Wissenzuwachs](#wissenzuwachs)
   - [Reflexion](#reflexion)
   - [Quellen](#quellen)
