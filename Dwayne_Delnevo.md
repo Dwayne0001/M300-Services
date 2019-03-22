@@ -4,7 +4,7 @@ LB2
 K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 
 * Virtualbox
-![Virtualbox](VirtualBox.png)
+![VirtualBox](VirtualBox.PNG)
     VirtualBox  (gedownloadet und installiert; erste Test-VM erstellt)
     Vagrant installiert und mit VirtualBox getestet 
     VisualStudio-Code (gedownloadet und installiert)
