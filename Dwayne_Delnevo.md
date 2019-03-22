@@ -1,10 +1,12 @@
 LB2
-
+#M300-Dokumentation
 -----------------------------------------------------------------
 K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 
+* Virtualbox
+![Virtualbox](Virtualbox.png)
+* Vagrant
     VirtualBox  (gedownloadet und installiert; erste Test-VM erstellt)
-    ![Virtualbox](Virtualbox.png)
     Vagrant installiert und mit VirtualBox getestet 
     VisualStudio-Code (gedownloadet und installiert)
     Git-Client (gedownloadet, installiert und konfiguriert)
