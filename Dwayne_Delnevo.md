@@ -14,7 +14,7 @@ LB2
   - [Reflexion](#reflexion)
   - [Quellen](#quellen)
   
------------------------------------------------------------------
+
 ***
 ## Persönlicher Wissensstand
 **Virtualisierung**
@@ -35,10 +35,10 @@ Fazit: Gute Kenntnisse.
 **Markdown**
 Ich habe Markdown im Modul 300 kennengelernt, vorhin kannte ich es nicht.
 Fazit: Sehr neu für mich.
+
 ***
 
 
------------------------------------------------------------------
 K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 
 * Virtualbox
