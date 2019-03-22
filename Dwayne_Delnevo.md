@@ -50,7 +50,7 @@ Fazit: Sehr neu für mich.
 * Git-Client  
 ![Git-Client](Git-Client.PNG)  
 
-**Git**
+**Git**  
 Nach Anleitung des M300-Repositories gemacht:  
 *Github*  
   1. Auf www.github.com Benutzerkonto erstellt
@@ -61,8 +61,28 @@ Nach Anleitung des M300-Repositories gemacht:
   2. Name vergeben: M300-Services
   3. Public gemacht
   4. "Initialize this repository with a README" ausgewählt
-  5. "Create a repository" wählen um Erstellung fertig zu stellen.
+  5. "Create a repository" wählen um Erstellung fertig zu stellen.  
   
+*Git Hub*  
+  1. Git 2.20.1 installiert (Mit Admin-Rechten)
+  2. Standardinstallation
+  3. Geöffnet und konfiguriert:  
+    >$ git config --global user.name "<Dwayne0001>"  
+    >$ git config --global user.email "<dwayne.delnevo@hotmail.ch>"  
+
+*SSH-Key*
+  1. Im Git Bash Termin:
+    >ssh-keygen -t rsa -b 4096 -C "dwayne.delnevo@hotmail.ch"  
+    >Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]  
+    >Enter passphrase (empty for no passphrase): []  
+    >Enter same passphrase again: []
+    
+   2.*%HOME%/.ssh/id_rsa.pub 
+   
+   mit Notepad öffnen und Schlüssel kopieren 
+   
+   3. Github Website öffnen und dort unter Settings/SSH den Schlüssel angebennd GPG keys angeben
+   
 ----------------------------------------
 K2: Eigene Lernumgebung ist eingerichtet
 
