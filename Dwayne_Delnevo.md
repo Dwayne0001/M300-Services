@@ -4,6 +4,7 @@ LB2
 K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig
 
     VirtualBox  (gedownloadet und installiert; erste Test-VM erstellt)
+    ![Virtualbox](Virtualbox.png)
     Vagrant installiert und mit VirtualBox getestet 
     VisualStudio-Code (gedownloadet und installiert)
     Git-Client (gedownloadet, installiert und konfiguriert)
