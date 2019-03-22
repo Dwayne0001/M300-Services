@@ -109,7 +109,32 @@ Vagrantfile erstellen und Umgebung initialisieren
 Konfigurierung und Erstellung einer VM mit Vagrantfile  
 > vagrant up  
 
+Verbindung via SSH herstellen  
+> vagrant ssh
 
+Status der VM anzeigen  
+> vagrant status
+
+VM pausieren/stoppen  
+> vagrant halt
+
+VM zerstören  
+> vagrant destroy
+
+**VisualStudio Code**  
+VisualStudio Code ist ein Texteditor von Microsoft.  
+Mit VisualStudio kann man ein Repository direkt öffnen und wenn man fertig ist kann man es auch gleich wieder pushen (dafür werden aber Extensions benötigt).  
+Bei der Installation von VisualStudio mussten wir für dieses Modul keine speziellen Angaben berücksichtigen; also Standardinstallation.  
+*Benötigte Extensions:*
+  Markdown All in One  
+  Vagrant Extension  
+  vscode-pdf Extension  
+Diese Extensions werden dazu benötigt damit diese Dokumentation und das Vagrant-file einfacher bearbeitet werden können.  
+Diese Extensions werden wie folgt installiert:  
+  1. Extensionname googeln
+  2. VisualStudio Code öffnen
+  3. Extension vom VisualStudio Marketplace herunterladen
+  4. Marketplace wird im VisualStudio Programm geöffnet und dort dann installieren wählen
 
 ----------------------------------------
 K2: Eigene Lernumgebung ist eingerichtet
