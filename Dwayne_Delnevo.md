@@ -146,14 +146,38 @@ Im M300 Repository ist ein Ubuntu VM mit Apache2 vorgefertigt. Damit ich diese b
 ***
 
 ***
-## Wissenswachstum
-asdasd
+## Wissenswachstum  
 
-**Git**
+**Linux**  
+Die Befehle um Dienste/Software zu installieren kannte ich bereits.  
+Ich habe aber gelernt mich besser in der Konsole zurecht zu finden.  
+
+**Virtualisierung**  
+Die verwendete Virtualisierungssoftware und die dazu entsprechenden Konfigurationen kannte ich bereits.  
+
+**Systemsicherheit**
+Ich konnte eine sichere Verbindung zu den VMs herstellen (SSH).  
+
+**Markdown**  
+Ich habe gelernt eine Dokumentation mit Markdown zu erstellen.  
+
+**Vagrant**  
+Ich habe gelernt eine Vagrantumgebung zu erstellen und das entsprechende Vagrantfile zu konfigurieren; aus diesem File ich dann automatisch VMs aufsetzten konnte.  
+
+**Git**  
 Ich habe gelernt was, Git, Repositories und Markdown sind. Wie man Repositories bearbeitet, klont und auch lokal absichert, und auch die Sprache Markdown und wie sie funktioniert.  
 Fazit: Ich kannte Git und Repositories vorher garnicht und kenne mich jetzt ziemlich gut aus. Desweiteren habe ich eine neue Sprache kennengelernt.  
 
+***  
+## Reflexion  
 
+Am Anfang hatte ich Schwierigkeiten wie Vagrant mit VirtualBox überhaupt funktioniert. Damit ich dieses Projekt überhaupt machen konnte, musste ich zuerst verstehen wie diese zwei Programme überhaupt zusammen funktionieren. Des Weiteren habe ich Markdown zu Beginn nicht richtig verstanden, dies kostete mich auch recht viel Zeit; es zu verstehen.  
+Leider blieb so nicht all zu viel Zeit übrig für das Konfigurieren.  
+Bei der nächsten LB werde ich diese Probleme nicht mehr haben (da ich jetzt beide Sachen besser verstehe) und somit kann ich mehr Zeit mit dem Konfigurieren auseinandersetzten.  
 
+## Quellen  
 
+* <https://github.com/mc-b/M300>  
+* <https://bscw.tbz.ch/bscw/bscw.cgi/20887767>
 
+***
