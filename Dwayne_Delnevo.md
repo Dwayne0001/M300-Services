@@ -185,7 +185,7 @@ Da ein Neustart unerwünscht ist, wird die Firewall manuell eingeschaltet. yes Y
 **Sicherheit**  
 Der Zugriff über SSH ist standardmässig möglich.  
 Beim automatisierten Aufsetzen, wird ein neuer SSH-Key generiert.  
-Die Firewall erlaubt den Zugriff über SSH und HTTP. Zusätzlich habe ich festegelegt, dass nur IPs aus dem Subnetz 192.168.100.0 zugreifen dürfen.  
+Die Firewall erlaubt den Zugriff über SSH und HTTP. Zusätzlich habe ich festegelegt, dass nur IPs aus dem Netz 192.168.100.0 zugreifen dürfen.  
 
 **Starten**  
 Die VM kann mit vagrant up gestartet werden, wenn man die Konsole im Ordner mit dem Vagrantfile ausführt.  
@@ -195,7 +195,7 @@ Danach wird durch vagrant ssh eine Verbindung hergestellt.
 *Aufsetzen*  
 Im Ordner Vagrant folgenden Befehl ausführen und die VM wird verbunden.  
 >vagrant up  
->vagrant ssh
+>vagrant ssh  
 
 ***
 ## Wissenswachstum  
