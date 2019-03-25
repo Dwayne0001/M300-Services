@@ -144,6 +144,58 @@ Im M300 Repository ist ein Ubuntu VM mit Apache2 vorgefertigt. Damit ich diese b
 ![PreVM](Pre_VM.PNG)  
 
 ***
+## Vagrant Ubuntu VM mit Firewall und Webserver  
+
+**Konfiguration**  
+In der Kopie von meinem Repository, habe ich mit vagrant init ein Vagrantfile erstellt.  
+Ich habe xenial64 verwendet.  
+Um die Firewall und den Webserver zu installieren wurde folgend angepasst.  
+  >Vagrant.configure("2") do |config|  
+  >config.vm.box = "ubuntu/xenial64"  
+
+Ich habe ein privates Netz ertellt (d.h. Host only). Es wurde die IP 192.168.100.10 verwendet.  
+>config.vm.network "private_network", ip: "192.168.100.10"  
+
+Es wird aus dem aktuellen Ordner ein shared Folder gemacht, der unter /var/www/html eingebunden wird.  
+Da dies der Ordner ist, in dem der Webserver das html Dokument verwendet, kann ich im Voraus ein index file in den Ordner einfügen, welches vom Webserver verwendet wird.  
+  >config.vm.synced_folder ".", "/var/www/html"  
+
+Die VM wird mit VirtualBox geöffnet.  
+  >config.vm.provider "virtualbox" do |vb|  
+
+Es werden 4 GB Ram zur Verfügung gestellt-  
+  >vb.memory = "4024"  
+  >end  
+
+Installieren von Apache2 und ufw. ufw erlaubt Ports von ssh und http und IPs vom 24-Netz 192.168.100.0  
+ > config.vm.provision "shell", inline: <<-SHELL  
+ > apt-get update  
+ > apt-get install -y apache2  
+ >apt-get update  
+ >apt-get install -y ufw  
+ >ufw allow ssh  
+ >ufw allow http  
+ >ufw allow from 192.168.100.0/24  
+
+Da ein Neustart unerwünscht ist, wird die Firewall manuell eingeschaltet. yes Y | führt dazu, dass die Abrage beim enablen mit Y beantwrtet wird.  
+  > yes Y | ufw enable  
+  > SHELL  
+  > end  
+
+**Sicherheit**  
+Der Zugriff über SSH ist standardmässig möglich.  
+Beim automatisierten Aufsetzen, wird ein neuer SSH-Key generiert.  
+Die Firewall erlaubt den Zugriff über SSH und HTTP. Zusätzlich habe ich festegelegt, dass nur IPs aus dem Subnetz 192.168.100.0 zugreifen dürfen.  
+
+**Starten**  
+Die VM kann mit vagrant up gestartet werden, wenn man die Konsole im Ordner mit dem Vagrantfile ausführt.  
+Danach wird durch vagrant ssh eine Verbindung hergestellt.  
+
+**Testen**  
+*Aufsetzen*  
+Im Ordner Vagrant folgenden Befehl ausführen und die VM wird verbunden.  
+>vagrant up  
+>vagrant ssh
 
 ***
 ## Wissenswachstum  
