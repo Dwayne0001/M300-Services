@@ -6,7 +6,7 @@
 - [Dokumentation LB2](#dokumentation-lb2)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [Persönlicher Wissensstand](#pers%C3%B6nlicher-wissensstand)
-  - [K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#k1:-umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig)
+  - [Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig)
   - [Vorgefertigte VM mit Vagrant aufsetzen](#vorgefertigte-vm-mit-vagrant-aufsetzen)
   - [Vagrant Ubuntu VM mit Firewall und Webserver](#vagrant-ubuntu-vm-mit-firewall-und-webserver)
   - [Wissenswachstum](#wissenswachstum)
