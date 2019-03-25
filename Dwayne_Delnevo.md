@@ -36,7 +36,7 @@ Ich habe Markdown im Modul 300 kennengelernt, vorhin kannte ich es nicht.
 Fazit: Sehr neu für mich.  
 
 ***
-## K1: Umgebung auf eigenem Notebook eingerichtet und funktionsfähig  
+## Umgebung auf eigenem Notebook eingerichtet und funktionsfähig  
 * Virtualbox  
 ![VirtualBox](VirtualBox.PNG)
 
