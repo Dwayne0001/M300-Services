@@ -136,7 +136,19 @@ Diese Extensions werden wie folgt installiert:
   1. VisualStudio Code öffnen  
   2. ExtensionMenu öffnen (Abkürzung: Ctrl+Shift+X)  
   3. Gewünschte Extension suchen und installieren  
+  
+***
+##  Vorgefertigte VM mit Vagrant aufsetzen
 
+Im M300 Repository ist ein Ubuntu VM mit Apache2 vorgefertigt. Damit ich diese bei mir aufsetzen kann, muss ich in das richtige Verzeichnis, also /M300/vagrant/web und nacher muss man den Befehl "vagrant up" anwenden. Sobald die VM aufgesetzt ist kann man mit "vagrant ssh" auf die VM zugreifen. 
+![PreVM](Pre-VM.PNG)
+
+Aus dem M300 Repository, setzte ich automatisiert eine Ubuntu VM mit Apache2 auf.
+Dazu musste ich nur in das Verzeichnis /M300/vagrant/web wechseln und "vagrant up" ausführen. 
+Die VM wird daraufhin installiert und in Virtualbox angezeigt.  
+
+
+***
 
 ***
 ## Wissenswachstum
