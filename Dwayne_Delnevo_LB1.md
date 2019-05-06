@@ -1,5 +1,5 @@
 ***
-# Dokumentation LB2
+# Dokumentation LB1
 **Zum Modul 300 von Dwayne Delnevo**
 ***
 ## Inhaltsverzeichnis
