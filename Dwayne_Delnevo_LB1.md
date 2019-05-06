@@ -3,7 +3,7 @@
 **Zum Modul 300 von Dwayne Delnevo**
 ***
 ## Inhaltsverzeichnis
-- [Dokumentation LB2](#dokumentation-lb2)
+- [Dokumentation LB1](#dokumentation-lb1)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [Persönlicher Wissensstand](#pers%C3%B6nlicher-wissensstand)
   - [Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig)
