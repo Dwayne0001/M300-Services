@@ -3,139 +3,140 @@
 **Zum Modul 300 von Dwayne Delnevo**
 ***
 ## Inhaltsverzeichnis
-- [Dokumentation LB2](#dokumentation-lb2)
-  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [Persönlicher Wissensstand](#pers%C3%B6nlicher-wissensstand)
-  - [Umgebung auf eigenem Notebook eingerichtet und funktionsfähig](#umgebung-auf-eigenem-notebook-eingerichtet-und-funktionsfähig)
-  - [Vorgefertigte VM mit Vagrant aufsetzen](#vorgefertigte-vm-mit-vagrant-aufsetzen)
-  - [Vagrant Ubuntu VM mit Firewall und Webserver](#vagrant-ubuntu-vm-mit-firewall-und-webserver)
-  - [Wissenswachstum](#wissenswachstum)
-  - [Reflexion](#reflexion)
-  - [Quellen](#quellen)
+- [Einleitung](#einleitung)
+- [Kapitel 1 Der Service](#kapitel-1-der-service)
+- [Kapitel 2 Technische Angaben](#kapitel-2-technische-angaben)
+  - [Netzwerkplan](#netzwerkplan)
+  - [Code](#code)
+  - [Anleitung für den Betrieb](#anleitung-f%C3%BCr-den-betrieb)
+- [Kapitel 3 Testing](#kapitel-3-testing)
+- [Quellen](#quellen)
   
 
 ***
-## Persönlicher Wissensstand
-**Virtualisierung**  
-Eigentlich ausschliesslich VMware Produkte verwendet; in der Schule oder gewissen üKs Workstation, im Geschäft meist ESXi. Ich habe auch schon viele interne (im Geschäft) Lehrlingsprojekte mit Virtualisierung gemacht. Im Privaten verwende ich eigentlich keine Virtualisierung.  
-*Fazit:* Gute Kenntnisse  
-**Vagrant**  
-Ich habe Vagrant im Modul 300 kennengelernt.  
-*Fazit:* Sehr neu für mich.  
-**Git**  
-Github habe ich auch im Modul 300 kennengelernt.  
-*Fazit:* Auch sehr neu für mich.  
-**Linux**  
-In der TBZ wurde Linux zwischnendurch mal verwendet. Meist kam es jedoch in üKs zu Gebrauch.  
-*Fazit:* Nicht neu, aber auch nicht die grössten Kenntnisse.  
-**Systemsicherheit**  
-Ich hatte bereits ein üK welcher sich explizit mit dem beschäftigte. Des Weiteren darf ich Geschäft oft auch Firewall mit konfigurieren oder für Testingzwecke selber testen.  
-*Fazit:* Gute Kenntnisse.  
-**Markdown**  
-Ich habe Markdown im Modul 300 kennengelernt, vorhin kannte ich es nicht.  
-*Fazit:* Sehr neu für mich.  
+# Einleitung
 
-***
-## Umgebung auf eigenem Notebook eingerichtet und funktionsfähig  
-* Virtualbox  
-![VirtualBox](VirtualBox.PNG)
+In der Lernberuteilung geht es um das Ausetzten und betreiben von einem Service mit Docker. Docker ist eine Open-Source Containervirtualisierungsplatfform. Dank dem Docker Hub können viele Images von Anwendungen oder Betriebssystemen heruntergeladen werden.
 
-* Vagrant  
-![Vagrant](Vagrant.PNG)  
+Die LB2 wurde zusammen mit Herrn Rutz und Herrn Grob ausgearbeitet.
 
-* VisualStudio  
-![VisualStudio](VisualStudio.PNG)
+# Kapitel 1 Der Service
 
-* Git-Client  
-![Git-Client](Git-Client.PNG)  
+Als Service wird **Wordpress** realisiert. Im Hintergrund wird **MySQL** benutzt. Zuätzlich ist es möglich dank **PHPMyAdmin** per Webinterface die Datenbanken zu administrieren. Durch den Visuellen Faktor und dem übersichtlichem GUI wird die Arbeit mit den MYSQL Datenbank sehr vereinfacht. 
 
-**Git**  
-Nach Anleitung des M300-Repositories gemacht:  
-*Github*  
-  1. Auf www.github.com Benutzerkonto erstellt
-  2. Bestätigungsemail bestätigt und Anmeldung getestet.  
+Per Interner Verlinkung zwischen MySQL und PHPMyAdmin und MySQL und Wordpress kann dies ermöglicht werden.
 
-*Repository erstellen*  
-  1. "New Repository" ausgewählt
-  2. Name vergeben: M300-Services
-  3. Public gemacht
-  4. "Initialize this repository with a README" ausgewählt
-  5. "Create a repository" wählen um Erstellung fertig zu stellen.  
-  
-*Git Hub*  
-  1. Git 2.20.1 installiert (Mit Admin-Rechten)
-  2. Standardinstallation
-  3. Geöffnet und konfiguriert:  
-    >$ git config --global user.name "<dwayne0001>"  
-    >$ git config --global user.email "<dwayne.delnevo@hotmail.ch>"  
+![GUI](Images/GUI.PNG)
 
-*SSH-Key*  
-  1. Im Git Bash Termin:
-    >ssh-keygen -t rsa -b 4096 -C "dwayne.delnevo@hotmail.ch"  
-    >Enter a file in which to save the key (~/.ssh/id_rsa):  
-    (Einfach Enter drücken)  
-    >Enter passphrase (empty for no passphrase):  
-    (Kennwort definieren)  
-    >Enter same passphrase again:  
-    (Kennwort erneut eingeben)  
-   2. %HOME%/.ssh/id_rsa.pub mit Notepad öffnen und Schlüssel kopieren  
-   3. Github Website öffnen und dort unter Settings/SSH den Schlüssel angebennd GPG keys angeben  
-   
-*Repository klonen*  
-Modulrepository:  
-    > git clone https://github.com/mc-b/M300  
-    > cd M300  
-    > git pull  
-    > git status  
-    
-Mein Repository:  
-    >git clone git@github.com:Dwayne0001/M300-Services.git  
-    > git pull --> Um zu aktualisieren  
-    > git status --> Um  Status der lokalen Kopie anzuzeigen  
+# Kapitel 2 Technische Angaben
 
-**VirtualBox**  
-Mit Hilfe von VirtualBox können Virtuelle Maschinen erstellt und verwaltet werden.  
-VirtualBox ist eine Opensource-Virtualisierungssoftware.  
-Da in diesem Modul keine speziellen Einstellungen notwendig sind, kann bei der Installation einfach die Standardinstallation verwendet werden.  
+Der Service wird mit 3 Docker Container realisiert. Bei ersten wird MySQL, beim zweiten PHPMyAdmin und beim dritte Wordpress installiert. Durch das custom "Net1" Netzwerk können die Container kommunizieren.
 
-**Vagrant**  
-Mit Hilfe von Vagrant kann man in VirtualBox automatisiert VMs und Services installieren lassen.  
-Wie mit VirtualBox werden hier keine speziellen Einstellungen bei der Installation gebraucht, deshalb kann man die Standardinstallation verwenden.  
+| **Info**       | **Container** 1 |   **Container** 2 |  **Container** 3 |
+| :------------- | :-------------: | ----------------: | ---------------: |
+| Container Name |      MySQL      |        PHPMyAdmin |        Wordpress |
+| Docker Image   |    mysql:5.7    | phpmyadmin:latest | wordpress:latest |
+| Netzwerk       |      Net1       |              Net1 |             Net1 |
+| IP             |      DHCP       |              DHCP |             DHCP |
 
-*Wichtige Befehle*  
+## Netzwerkplan
 
-Vagrantfile erstellen und Umgebung initialisieren  
-> vagrant init  
+![Netzwerk](Images/netzwerk.png)
 
-Konfigurierung und Erstellung einer VM mit Vagrantfile  
-> vagrant up  
+Die Container werden innerhalb von der Docker VM aufgesetzt. Das Net1 wird auf den Modus "Bridge" konfiguriert, sodass die Container vom Host erreichbar sind. Dabei ist der Host auch der Gateway zum Internet.
 
-Verbindung via SSH herstellen  
-> vagrant ssh
+Die drei Container werden am Net1 angehängt und bekommen per DHCP eine IP im Range 127.0.0.x/24. Der Gateway erhält immer die IP 172.0.0.1.
 
-Status der VM anzeigen  
-> vagrant status
+Mit einem Link kann der PHPMyAdmin und Wordpress auf den MySQL Container zugreifen. Wie dies Funktioniert, wird im Abschnitt **Code** eingegangen.
 
-VM pausieren/stoppen  
-> vagrant halt
+Damit der Host auf das Webinterface des PHPMyAdmin zugreifen kann, muss der Container Port 80 auf den Host Port 8080 gemapt werden. Bei Wordpress wird das gleiche auf den Host Port 8081 gemacht.
 
-VM zerstören  
-> vagrant destroy
+## Code
+Das Projekt wurde mit einem Docker Compose File realisiert. In diesem File werden alle Container und Netzwerk Parameter definiert. Mit diesem Befehl wird dann die Struktur aufgesetzt:
+```Shell
+docker-compose -f ʺPfad\zum\File\docker-compose.ymlʺ up -d --build
+ ```
+"-d" definiert, dass die Container im Hintergrund aufgesetzt wird.
 
-**VisualStudio Code**  
-VisualStudio Code ist ein Texteditor von Microsoft.  
-Mit VisualStudio kann man ein Repository direkt öffnen und wenn man fertig ist kann man es auch gleich wieder pushen (dafür werden aber Extensions benötigt).  
-Bei der Installation von VisualStudio mussten wir für dieses Modul keine speziellen Angaben berücksichtigen; also Standardinstallation.  
-**Benötigte Extensions:**  
-  - Markdown All in One  
-  - Vagrant Extension  
-  - vscode-pdf Extension  
-  
-Diese Extensions werden dazu benötigt damit diese Dokumentation und das Vagrant-file einfacher bearbeitet werden können.  
-Diese Extensions werden wie folgt installiert:  
-  1. VisualStudio Code öffnen  
-  2. ExtensionMenu öffnen (Abkürzung: Ctrl+Shift+X)  
-  3. Gewünschte Extension suchen und installieren  
-  
-***
+"-f" setzt den den Pfad zum docker-compose.yml File
 
+Hier der Code des docker-compose.yml File:
+
+![code](Images/code.PNG)
+
+Auf Zeile 4-16 wird der MySQL Container erstellt und konfiguriert
+
+Auf Zeile 18-29 wird der PHPMyAdmin Container erstellt. Dabei wird auf Zeile 29 die Verlinkung zwischen PHPMyAdmin und MySQL realisiert(Datenbank = MySQL Container).
+
+Auf Zeile 32-46 wird der Wordpress COntainer erstellt. Auf Zeile 42 wird die Verlinkung zu MySQL gesetzt.
+
+Auf Zeile 47-48 wird das Volume gesetzt.
+
+Auf der Zeile 49-50 wird das Netzwerk erstellt
+
+Das File ist auf meinem GitHub LB2 [Repository][lb2git] abgelegt
+
+## Anleitung für den Betrieb
+
+### 1. Installation <!-- omit in toc -->
+Wie oben beim Code erklärt wird per Befehel das Docker-Compose.yml ausgeführt und somit die Container aufgesetzt:
+```Shell
+docker-compose -f ʺPfad\zum\File\docker-compose.ymlʺ up -d --build
+ ```
+Wenn alles geklappt hat sieht es so aus:
+
+![installation](Images/installation.PNG)
+
+ ### 2. Zugriff auf MySQL Webinterface <!-- omit in toc -->
+
+- Um auf PHPMyAdmin zuzugreifen, muss ein Browser geöffnet werden.
+
+- Es wird die URL http://localhost:8080 eigegeben
+
+Nun sieht das Fenster so aus:
+
+![Web](Images/web.PNG)
+
+### 3. PHPMyAdmin Login <!-- omit in toc -->
+Als Benutzer wird **User** genommen
+
+Das Passwort ist **1234**
+
+Die Anmeldung erflogt beim drücken der Enter-taste
+
+Das Fenster sieht jetzt so aus:
+
+![PHP](Images/GUI.PNG)
+
+### 4. Los arbeiten mit PHPMyAmdin <!-- omit in toc -->
+
+AB jetzt kann mit PHPMyAdmin gearbeitet werden. Es können Datenbanken erstellt und administriert werden.
+
+Wenn benötigt können neue Benutzer angelegt werden.
+
+Offizielle PHPMyAdmin [Website][ophp]
+
+Offizielle MySQL [Website][osql]
+
+### 5. Zugriff auf Wordpress <!-- omit in toc -->
+
+- Um auf Wordpress zuzugreifen, muss ein Browser geöffnet werden.
+
+- Es wird die URL http://localhost:8081 eigegeben
+
+Nun sieht das Fenster so aus:
+![Wordpress](Images/wordpress.png)
+
+Jetzt kann die Sprache ausgewählt werden. Anschliessend wird die erste Seite erstellt.
+
+# Kapitel 3 Testing
+
+Das Testing wir mit einem Testing Protokoll durchgeführt. Dabei wird er SOLL / IST Zustand Verglichen und erläutert wie getestet wurde.
+
+| SOLL-Zustand                                                             |                                      IST-Zustand                                      |                                                                                                            Test |
+| :----------------------------------------------------------------------- | :-----------------------------------------------------------------------------------: | --------------------------------------------------------------------------------------------------------------: |
+| 3 Container wurden per Befehl installiert                                |                 Die 3 Container wurden erstellt und werden ausgeführt                 | In Powershell wurde der Befehl docker-compose -f "C:\myrep\my_M300\Docker\LB2\docker-compose.yml" up -d --build |
+| Das Netzwerk "Net1" wurde erstellt                                       |             Das Netzwerk wurde während dem Ausführen des Befehls erstellt             |                                        Mit dem Befehl: Docker Network ls werden alle Docker Netzwerke angezeigt |
+| Die Portverlinkung von PHPMyAdmin von Port 80 auf 8080 ist gewährleistet | Mit http://localhost:8080 kann auf das Webinterface von PHPMyAdmin zugegriffen werden |                                                             Im Browser die Adresse http://localhost:8080 öffnen |
+| Mit dem Gesetzten User Login kann man sich anmelden                      |           Mit dem Benutzername User und Passwort 1234 kann eingelogt werden           |                                            In der Anmeldemaske von PHPMyAdmin werden die Login Daten eingegeben |
+| Die Portverlinkung von Wordpress von Port 80 auf 8081 ist gewährleistet | Mit http://localhost:8081 kann auf Wordpress zugegriffen werden |                                                             Im Browser die Adresse http://localhost:8081 öffnen |
