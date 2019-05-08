@@ -74,7 +74,7 @@ Hier der Code des Docker Compose Files:
 
 **Auf der Zeile 49-50** wird das Netzwerk erstellt
 
-Des Weiteren ist das File hier [Repository][lb3git][docker-compose.yml] abgelegt
+Des Weiteren ist das File hier [Repository][lb3git] abgelegt.
 
 ## Anleitung für den Betrieb
 
