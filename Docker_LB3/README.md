@@ -5,11 +5,11 @@
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
 - [Der Service](#der-service)
-- [Kapitel 2 Technische Angaben](#kapitel-2-technische-angaben)
+- [Technische Angaben](#technische-angaben)
   - [Netzwerkplan](#netzwerkplan)
   - [Code](#code)
   - [Anleitung für den Betrieb](#anleitung-f%C3%BCr-den-betrieb)
-- [Kapitel 3 Testing](#kapitel-3-testing)
+- [Testing](#kapitel-3-testing)
 - [Quellen](#quellen)
   
 
@@ -27,14 +27,14 @@ Durch die Verlinkung von **MySQL** -> **PHPmyAdmin** und **MySQL** -> **Wordpres
 
 ![GUI](Images/GUI.PNG)
 
-# Kapitel 2 Technische Angaben
+#Technische Angaben
 
 Der Service wird mit 3 Docker Container realisiert. Bei ersten wird MySQL, beim zweiten PHPMyAdmin und beim dritte Wordpress installiert. Durch das custom "Net1" Netzwerk können die Container kommunizieren.
 
 | **Info**           | **Container** 1 |   **Container** 2 |  **Container** 3 |
 | :----------------- | :-------------: | ----------------: | ---------------: |
 | **Container Name** |      MySQL      |        PHPMyAdmin |        Wordpress |
-| **Docker Image**   |    mysql:5.7    | phpmyadmin:latest | wordpress:latest |
+| **Docker Image**   |    MySQL 5.7    | PHPmyAdmin        | Wordpress        |
 | **Netzwerk**       |      Net1       |              Net1 |             Net1 |
 | **IP**             |      DHCP       |              DHCP |             DHCP |
 
@@ -129,7 +129,7 @@ Nun sieht das Fenster so aus:
 
 Jetzt kann die Sprache ausgewählt werden. Anschliessend wird die erste Seite erstellt.
 
-# Kapitel 3 Testing
+#Testing
 
 Das Testing wir mit einem Testing Protokoll durchgeführt. Dabei wird er SOLL / IST Zustand Verglichen und erläutert wie getestet wurde.
 
