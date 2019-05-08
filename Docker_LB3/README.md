@@ -33,8 +33,8 @@ Der Service wird mit 3 Docker Container realisiert. Bei ersten wird MySQL, beim 
 
 | **Info**           | **Container** 1 |   **Container** 2 |  **Container** 3 |
 | :----------------- | :-------------: | ----------------: | ---------------: |
-| **Container Name** |      MySQL      |        PHPMyAdmin |        Wordpress |
-| **Docker Image**   |    MySQL 5.7    | PHPmyAdmin        | Wordpress        |
+| **Container Name** |      MySQL      |    PHPMyAdmin     |     Wordpress    |
+| **Docker Image**   |    MySQL 5.7    |    PHPmyAdmin     |     Wordpress    |
 | **Netzwerk**       |      Net1       |        Net1       |        Net1      |
 | **IP**             |      DHCP       |        DHCP       |        DHCP      |
 
