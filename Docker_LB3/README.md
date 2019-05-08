@@ -48,31 +48,31 @@ Per DHCP bekommen die, an das Net1 angehängten, Container eine IP im Range 127.
 
 Im Abschnitt **Code** wird definiert, wie **PHPmyAdmin** und **Wordpress** auf den **MySQL** Container zugreifen.  
 
-Damit ich vom Host aus auf das Webinterface des **PHPmyAdmin** Zugriff habe, muss der Port 80 des Containers auf den Host Port 8080 gemapt werden. Bei **Wordpress** ähnlich; auf 8081. 
-Damit der Host auf das Webinterface des PHPMyAdmin zugreifen kann, muss der Container Port 80 auf den Host Port 8080 gemapt werden. Bei Wordpress wird das gleiche auf den Host Port 8081 gemacht.
+Damit ich vom Host aus auf das Webinterface des **PHPmyAdmin** Zugriff habe, muss der Port 80 des Containers auf den Host Port 8080 gemapt werden. Bei **Wordpress** ähnlich; auf 8081.  
 
 ## Code
-Das Projekt wurde mit einem Docker Compose File realisiert. In diesem File werden alle Container und Netzwerk Parameter definiert. Mit diesem Befehl wird dann die Struktur aufgesetzt:
+Das Projekt wurde mit Hilfe eines Docker Compose Files erstellt. Alle Netzwerk und Container Parameter werden dabei definiert.  
+Mit folgendem Befehl wird die ganze Struktur aufgesetzt:  
 ```Shell
 docker-compose -f ʺPfad\zum\File\docker-compose.ymlʺ up -d --build
  ```
-"-d" definiert, dass die Container im Hintergrund aufgesetzt wird.
+Durch "-d" wird definiert, dass die Container im Hintergrund aufgesetzt wird.
 
-"-f" setzt den den Pfad zum docker-compose.yml File
+Durch "-f" setzt man den Pfad zum docker-compose.yml File
 
-Hier der Code des docker-compose.yml File:
+Hier der Code des Docker Compose Files:
 
 ![code](Images/code.PNG)
 
-Auf Zeile 4-16 wird der MySQL Container erstellt und konfiguriert
+**Auf Zeile 4-16** wird der MySQL Container erstellt und konfiguriert
 
-Auf Zeile 18-29 wird der PHPMyAdmin Container erstellt. Dabei wird auf Zeile 29 die Verlinkung zwischen PHPMyAdmin und MySQL realisiert(Datenbank = MySQL Container).
+**Auf Zeile 18-29** wird der PHPMyAdmin Container erstellt. Dabei wird auf Zeile 29 die Verlinkung zwischen PHPMyAdmin und MySQL realisiert(Datenbank = MySQL Container).
 
-Auf Zeile 32-46 wird der Wordpress COntainer erstellt. Auf Zeile 42 wird die Verlinkung zu MySQL gesetzt.
+**Auf Zeile 32-46** wird der Wordpress COntainer erstellt. Auf Zeile 42 wird die Verlinkung zu MySQL gesetzt.
 
-Auf Zeile 47-48 wird das Volume gesetzt.
+**Auf Zeile 47-48** wird das Volume gesetzt.
 
-Auf der Zeile 49-50 wird das Netzwerk erstellt
+**Auf der Zeile 49-50** wird das Netzwerk erstellt
 
 Das File ist auf meinem GitHub LB2 [Repository][lb2git] abgelegt
 
