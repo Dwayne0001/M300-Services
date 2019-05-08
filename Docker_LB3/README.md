@@ -74,11 +74,11 @@ Hier der Code des Docker Compose Files:
 
 **Auf der Zeile 49-50** wird das Netzwerk erstellt
 
-Des Weiteren ist das File hier [Repository][docker_lb3git] abgelegt.
+Das File ist in meinem Repository abgelegt.  
 
 ## Anleitung für den Betrieb
 
-### 1. Installation <!-- omit in toc -->
+### 1. Installation 
 Wie oben beim Code erklärt wird per Befehel das Docker-Compose.yml ausgeführt und somit die Container aufgesetzt:
 ```Shell
 docker-compose -f ʺPfad\zum\File\docker-compose.ymlʺ up -d --build
