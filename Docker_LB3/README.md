@@ -4,7 +4,7 @@
 ***
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
-- [Kapitel 1 Der Service](#kapitel-1-der-service)
+- [Der Service](#der-service)
 - [Kapitel 2 Technische Angaben](#kapitel-2-technische-angaben)
   - [Netzwerkplan](#netzwerkplan)
   - [Code](#code)
@@ -16,15 +16,14 @@
 ***
 # Einleitung
 
-In der Lernberuteilung geht es um das Ausetzten und betreiben von einem Service mit Docker. Docker ist eine Open-Source Containervirtualisierungsplatfform. Dank dem Docker Hub können viele Images von Anwendungen oder Betriebssystemen heruntergeladen werden.
+In dieser LB geht es darum, einen Service mit Docker aufzusetzten und zu betreiben. Docker ist eine Containervirtualisierungsplatform; Open-Source. Mit Hilfe des Docker Hubs können sehr leicht viele Images (Vorbereitete Zustände von Anwendungen oder OS) heruntergeladen werden.  
 
-Die LB2 wurde zusammen mit Herrn Rutz und Herrn Grob ausgearbeitet.
+# Der Service
 
-# Kapitel 1 Der Service
+Ich werde **Wordpress** als Service verwenden; im Hintergrund realisiere ich **mysql**.  
+Dank **PHPmyAdmin** kann amn die Datenbank sehr leicht mit dem Webinterface administrieren. 
 
-Als Service wird **Wordpress** realisiert. Im Hintergrund wird **MySQL** benutzt. Zuätzlich ist es möglich dank **PHPMyAdmin** per Webinterface die Datenbanken zu administrieren. Durch den Visuellen Faktor und dem übersichtlichem GUI wird die Arbeit mit den MYSQL Datenbank sehr vereinfacht. 
-
-Per Interner Verlinkung zwischen MySQL und PHPMyAdmin und MySQL und Wordpress kann dies ermöglicht werden.
+Durch die Verlinkung von **MySQL** -> **PHPmyAdmin** und **MySQL** -> **Wordpress** wird dies möglich gemacht.
 
 ![GUI](Images/GUI.PNG)
 
@@ -32,23 +31,24 @@ Per Interner Verlinkung zwischen MySQL und PHPMyAdmin und MySQL und Wordpress ka
 
 Der Service wird mit 3 Docker Container realisiert. Bei ersten wird MySQL, beim zweiten PHPMyAdmin und beim dritte Wordpress installiert. Durch das custom "Net1" Netzwerk können die Container kommunizieren.
 
-| **Info**       | **Container** 1 |   **Container** 2 |  **Container** 3 |
-| :------------- | :-------------: | ----------------: | ---------------: |
-| Container Name |      MySQL      |        PHPMyAdmin |        Wordpress |
-| Docker Image   |    mysql:5.7    | phpmyadmin:latest | wordpress:latest |
-| Netzwerk       |      Net1       |              Net1 |             Net1 |
-| IP             |      DHCP       |              DHCP |             DHCP |
+| **Info**           | **Container** 1 |   **Container** 2 |  **Container** 3 |
+| :----------------- | :-------------: | ----------------: | ---------------: |
+| **Container Name** |      MySQL      |        PHPMyAdmin |        Wordpress |
+| **Docker Image**   |    mysql:5.7    | phpmyadmin:latest | wordpress:latest |
+| **Netzwerk**       |      Net1       |              Net1 |             Net1 |
+| **IP**             |      DHCP       |              DHCP |             DHCP |
 
 ## Netzwerkplan
 
 ![Netzwerk](Images/netzwerk.png)
 
-Die Container werden innerhalb von der Docker VM aufgesetzt. Das Net1 wird auf den Modus "Bridge" konfiguriert, sodass die Container vom Host erreichbar sind. Dabei ist der Host auch der Gateway zum Internet.
+Durch das Konfigurieren des Net1 auf "Bridge", werden die Container vom Host erreichbar sein; unter anderem ist der Host dann auch der Gateway ins WAN.  
 
-Die drei Container werden am Net1 angehängt und bekommen per DHCP eine IP im Range 127.0.0.x/24. Der Gateway erhält immer die IP 172.0.0.1.
+Per DHCP bekommen die, an das Net1 angehängten, Container eine IP im Range 127.0.0.x/24. Der Gateway/Host hat immer die IP 127.0.0.1.  
 
-Mit einem Link kann der PHPMyAdmin und Wordpress auf den MySQL Container zugreifen. Wie dies Funktioniert, wird im Abschnitt **Code** eingegangen.
+Im Abschnitt **Code** wird definiert, wie **PHPmyAdmin** und **Wordpress** auf den **MySQL** Container zugreifen.  
 
+Damit ich vom Host aus auf das Webinterface des **PHPmyAdmin** Zugriff habe, muss der Port 80 des Containers auf den Host Port 8080 gemapt werden. Bei **Wordpress** ähnlich; auf 8081. 
 Damit der Host auf das Webinterface des PHPMyAdmin zugreifen kann, muss der Container Port 80 auf den Host Port 8080 gemapt werden. Bei Wordpress wird das gleiche auf den Host Port 8081 gemacht.
 
 ## Code
