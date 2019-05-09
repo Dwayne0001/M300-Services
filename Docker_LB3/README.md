@@ -10,7 +10,9 @@
   - [Code](#code)
   - [Anleitung für den Betrieb](#anleitung-f%C3%BCr-den-betrieb)
 - [Testing](#kapitel-3-testing)
-- [Quellen](#quellen)
+- [Vergleich Vorwissen und Wissenzuwachs](#vergleich)
+- [Reflexion zur LB3](#reflexion_zur_lb3)
+
   
 
 ***
@@ -131,3 +133,15 @@ Dabei wird der SOLL / IST Zustand Verglichen und erläutert wie er getestet wurd
 | Die Portverlinkung von PHPMyAdmin, Port 80 auf 8080, ist gewährleistet. | Mit http://localhost:8080 kann auf das Webinterface von PHPMyAdmin zugegriffen werden. |                                                             Im Browser die Adresse http://localhost:8080 öffnen. |
 | Mit dem Gesetzten User Login kann man sich anmelden.                     |           Mit dem Benutzername testuser und Passwort test312 kann man sich eingen.           |                                            In der Anmeldemaske von PHPMyAdmin werden die Login Daten getestet. |
 | Die Portverlinkung von Wordpress von Port 80 auf 8081 ist gewährleistet. | Mit http://localhost:8081 kann auf Wordpress zugegriffen werden. |                                                             Im Browser die Adresse http://localhost:8081 öffnen. |
+
+# Vergleich
+
+Am Anfang der LB3 hatte ich so gut wie keine Ahnung von Docker, Container etc. Ich hatte zwar eine leichte Ahnung was Docker ist, aber ich hatte nie wirklich was damit zu tun; Die Applikationsentwicklung in unserer Firma verwendet es z.B.  
+Im Laufe dieser LB habe ich sehr viel neues dazu gelernt! Z.B was Docker und Container sind, wie sie funktioniere und zusammenspielen. Mit Hilfe von Docker-Compose können z.B mehrere Container gleichzeitig erstellt werden; diese Container können auch untereinander kommunizieren. Die Datei dazu heisst docker-compose.yml; in dieser Datei werden div. Sachen (z.B. Services. Volumes und Netzwerke) definiert.  
+
+# Reflexion zur LB3  
+
+Diese LB war ziemlich schwierig für mich da so ziemlich alles neu für mich war. Ich musste sehr viel Recherchieren und mit Schulkollegen ausstudieren. Ich kannte mich zwar mit VMs aus, jedoch ging es bei der LB3 nicht um VMs sondern Container was wieder etwas komplett neues für mich war. Des Weiteren kamm auch noch Docker-Compose dazu, welches ich z.B. auch am Anfang null verstanden habe. 
+
+
+
