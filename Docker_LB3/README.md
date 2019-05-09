@@ -27,7 +27,7 @@ Durch die Verlinkung von **MySQL** -> **PHPmyAdmin** und **MySQL** -> **Wordpres
 
 ![PHPmyAdmin](PHPmyAdminNEW.PNG)
 
-#Technische Angaben
+# Technische Angaben
 
 Der Service wird mit 3 Docker Container realisiert. Bei ersten wird MySQL, beim zweiten PHPMyAdmin und beim dritte Wordpress installiert. Durch das custom "Net1" Netzwerk können die Container kommunizieren.
 
@@ -40,7 +40,7 @@ Der Service wird mit 3 Docker Container realisiert. Bei ersten wird MySQL, beim 
 
 ## Netzwerkplan
 
-![Netzwerk](Images/netzwerk.png)
+![Netzwerkplan](Netzwerkplan.PNG)
 
 Durch das Konfigurieren des Net1 auf "Bridge", werden die Container vom Host erreichbar sein; unter anderem ist der Host dann auch der Gateway ins WAN.  
 
@@ -62,7 +62,7 @@ Durch "-f" setzt man den Pfad zum docker-compose.yml File
 
 Hier der Code des Docker Compose Files:
 
-![code](Images/code.PNG)
+![Code](Code.PNG)
 
 **Auf Zeile 4-16** wird der MySQL Container erstellt und konfiguriert
 
@@ -85,7 +85,7 @@ docker-compose -f ʺPfad\zum\File\docker-compose.ymlʺ up -d --build
  ```
 Wenn alles geklappt hat sieht es so aus:
 
-![installation](Images/installation.PNG)
+![Installation](Installation.PNG)
 
  ### 2. Zugriff auf MySQL Webinterface <!-- omit in toc -->
 
