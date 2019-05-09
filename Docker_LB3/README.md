@@ -157,6 +157,41 @@ Offizielle MySQL [Website][osql]
 
 - Wie mit PHPmyAdmin, muss man bei Wordpress auch einen Browser auf der Host-Maschine öffnen und den Link: http://localhost:8081 (8081 Wichtig!) eingeben.  
 
+### 6. Service überwachen
+
+Für die Container-Überwachung gibt es ein OpenSource-Tool, welches von der Community containisiert wurde: <https://github.com/maheshmahadevan/docker-monitoring-windows>.  
+Es beinhaltet Prometheus (Backend) und Grafana (Frontend).  
+Standardmässig gibt es zwei Dashboards: _Docker Host_ und _Docker Containers_.  
+Darin werden bereits mehrere Ressourcen geloggt und grafisch dargestellt.  
+
+Zudem lassen sich damit auch Alarme einstellen, so dass bei einem vordefinierten Ereigniss ein E-Mail, Slack-Benachrichtigung, etc. gesendet wird.  
+
+### 7. Container absichern
+
+Um die Container abzusichern können folgende Dinge erledigt werden:
+
+- Non-Root User definiert*  
+- CPU-Nutzung begrenzt  
+- Arbeitsspeicher-Nutzung begrenzt  
+- Restart-Eingeschaft definiert (Was passiert wenn die Contianer sich selber ausschalten)  
+
+Der User kann entweder direkt im `docker-compose.yml` (so wie ich es gemacht habe) oder im Dockerfile definiert werden.  
+
+CPU und Arbeitspeicher kann nur im `docker-compose.yml` begrenzt werden (oder direkt per Befehlszeile):
+
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 256M
+
+Die Restart-Eingeschaft wird im `docker-compose.yml` definiert. Es beschreibt, was passieren soll, sofern ein Container sich selber ausschaltet (sei es durch einen Befehl oder einen Absturz):
+    
+    restart: <option>
+
+Als `<option>` gibt es: `no`, `always`, `on-failure` oder `unless-stopped` \
+Standardmässig verwendet man `always`, sofern der Container nicht von selbst ausgeschaltet werden soll.
+
 # Testing
 
 Das Testing wir mit einem Testing Protokoll durchgeführt. 
