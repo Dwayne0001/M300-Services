@@ -12,7 +12,7 @@
   - [Anleitung für den Betrieb](#anleitung-f%C3%BCr-den-betrieb)
 - [Testing](#kapitel-3-testing)
 - [Vergleich Vorwissen und Wissenzuwachs](#vergleich)
-- [Reflexion zur LB3](#reflexion_zur_lb3)
+- [Reflexion zur LB3](#reflexion-zur-lb3)
 
   
 
@@ -80,7 +80,7 @@ Hier der Code des Docker Compose Files:
 
 Das File ist in meinem Repository abgelegt.  
 
-## Code  
+## Befehle  
 
 **Docker**  
 
