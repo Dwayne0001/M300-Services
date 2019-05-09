@@ -95,7 +95,7 @@ Wenn alles geklappt hat sieht es so aus:
 
 Nun sieht das Fenster so aus:
 
-![Web](Images/web.PNG)
+![phpLogin](phpLogin.PNG)
 
 ### 3. PHPMyAdmin Login
 Als Benutzer wird **testuser** genommen
@@ -106,7 +106,7 @@ Die Anmeldung erflogt beim drücken der Enter-taste
 
 Das Fenster sieht jetzt so aus:
 
-![PHP](Images/GUI.PNG)
+![AdminWeb](AdminWeb.PNG)
 
 ### 4. Los arbeiten mit PHPMyAmdin 
 
