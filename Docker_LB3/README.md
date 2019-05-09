@@ -87,7 +87,7 @@ Wenn alles geklappt hat sieht es so aus:
 
 ![Installation](Installation.PNG)
 
- ### 2. Zugriff auf MySQL Webinterface <!-- omit in toc -->
+ ### 2. Zugriff auf MySQL Webinterface
 
 - Um auf PHPMyAdmin zuzugreifen, muss ein Browser geöffnet werden.
 
@@ -97,10 +97,10 @@ Nun sieht das Fenster so aus:
 
 ![Web](Images/web.PNG)
 
-### 3. PHPMyAdmin Login <!-- omit in toc -->
-Als Benutzer wird **User** genommen
+### 3. PHPMyAdmin Login
+Als Benutzer wird **testuser** genommen
 
-Das Passwort ist **1234**
+Das Passwort ist **test312**
 
 Die Anmeldung erflogt beim drücken der Enter-taste
 
@@ -108,7 +108,7 @@ Das Fenster sieht jetzt so aus:
 
 ![PHP](Images/GUI.PNG)
 
-### 4. Los arbeiten mit PHPMyAmdin <!-- omit in toc -->
+### 4. Los arbeiten mit PHPMyAmdin 
 
 AB jetzt kann mit PHPMyAdmin gearbeitet werden. Es können Datenbanken erstellt und administriert werden.
 
@@ -118,7 +118,7 @@ Offizielle PHPMyAdmin [Website][ophp]
 
 Offizielle MySQL [Website][osql]
 
-### 5. Zugriff auf Wordpress <!-- omit in toc -->
+### 5. Zugriff auf Wordpress 
 
 - Um auf Wordpress zuzugreifen, muss ein Browser geöffnet werden.
 
@@ -138,5 +138,5 @@ Das Testing wir mit einem Testing Protokoll durchgeführt. Dabei wird er SOLL / 
 | 3 Container wurden per Befehl installiert                                |                 Die 3 Container wurden erstellt und werden ausgeführt                 | In Powershell wurde der Befehl docker-compose -f "C:\myrep\my_M300\Docker\LB2\docker-compose.yml" up -d --build |
 | Das Netzwerk "Net1" wurde erstellt                                       |             Das Netzwerk wurde während dem Ausführen des Befehls erstellt             |                                        Mit dem Befehl: Docker Network ls werden alle Docker Netzwerke angezeigt |
 | Die Portverlinkung von PHPMyAdmin von Port 80 auf 8080 ist gewährleistet | Mit http://localhost:8080 kann auf das Webinterface von PHPMyAdmin zugegriffen werden |                                                             Im Browser die Adresse http://localhost:8080 öffnen |
-| Mit dem Gesetzten User Login kann man sich anmelden                      |           Mit dem Benutzername User und Passwort 1234 kann eingelogt werden           |                                            In der Anmeldemaske von PHPMyAdmin werden die Login Daten eingegeben |
+| Mit dem Gesetzten User Login kann man sich anmelden                      |           Mit dem Benutzername User und Passwort test312 kann eingelogt werden           |                                            In der Anmeldemaske von PHPMyAdmin werden die Login Daten eingegeben |
 | Die Portverlinkung von Wordpress von Port 80 auf 8081 ist gewährleistet | Mit http://localhost:8081 kann auf Wordpress zugegriffen werden |                                                             Im Browser die Adresse http://localhost:8081 öffnen |
