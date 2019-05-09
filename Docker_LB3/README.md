@@ -19,12 +19,19 @@
 ***
 # Einleitung
 
+Visual Studio Code, Git-Client, Markdown-Editor und SSH-Keys gleich wie in LB2.  
 In dieser LB geht es darum, einen Service mit Docker aufzusetzten und zu betreiben. Docker ist eine Containervirtualisierungsplatform; Open-Source. Mit Hilfe des Docker Hubs können sehr leicht viele Images (Vorbereitete Zustände von Anwendungen oder OS) heruntergeladen werden.  
+
+| Kategorie              | Produkt                                              |
+| ------------------     | ---------------------------------------------------- |
+| Versionsverwaltung     | [Git](https://git-scm.com/)                          |
+| Container Engine       | [Docker for Windows](https://www.docker.com/)        |
+| Editor                 | [Visual Studio Code](https://code.visualstudio.com/) |
 
 # Der Service
 
 Ich werde **Wordpress** als Service verwenden; im Hintergrund realisiere ich **mysql**.  
-Dank **PHPmyAdmin** kann amn die Datenbank sehr leicht mit dem Webinterface administrieren. 
+Dank **PHPmyAdmin** kann man die Datenbank sehr leicht mit dem Webinterface administrieren. 
 
 Durch die Verlinkung von **MySQL** -> **PHPmyAdmin** und **MySQL** -> **Wordpress** wird dies möglich gemacht.
 
