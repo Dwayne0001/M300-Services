@@ -40,7 +40,8 @@ Der Service wird mit 3 Docker Container realisiert. Bei ersten wird MySQL, beim 
 
 ## Netzwerkplan
 
-![Netzwerkplan](Netzwerkplan.PNG)
+![Netzwerkplan](Netzwerkplan.PNG)  
+Das mit Blau markierte Netzwerk ist das Dockernetzwerk welches sich im 127.0.0.x/24 Bereich befindet.
 
 Durch das Konfigurieren des Net1 auf "Bridge", werden die Container vom Host erreichbar sein; unter anderem ist der Host dann auch der Gateway ins WAN.  
 
@@ -78,41 +79,37 @@ Das File ist in meinem Repository abgelegt.
 
 ## Anleitung für den Betrieb
 
-### 1. Installation 
-Wie oben beim Code erklärt wird per Befehel das Docker-Compose.yml ausgeführt und somit die Container aufgesetzt:
+### 1. Installation  
+Mit Hilfe des oben beschriebenen Codes werden per dem hier unten beschriebenem Befehl die Container aufgesetzt:  
 ```Shell
 docker-compose -f ʺPfad\zum\File\docker-compose.ymlʺ up -d --build
  ```
-Wenn alles geklappt hat sieht es so aus:
+Am Ende einer erfolgreichen Ausetzung, sollte es so aussehen.  
 
 ![Installation](Installation.PNG)
 
- ### 2. Zugriff auf MySQL Webinterface
+ ### 2. Zugriff auf MySQL Webinterface  
 
-- Um auf PHPMyAdmin zuzugreifen, muss ein Browser geöffnet werden.
+- Um auf PHPmyAdmin zugreifen zu können, muss man auf irgendeinen Browser (von der Host-Maschine) die URL: http://localhost:8080 eingeben.  
 
-- Es wird die URL http://localhost:8080 eigegeben
-
-Nun sieht das Fenster so aus:
+Folgend öffnet sich dieses Fenster:  
 
 ![phpLogin](phpLogin.PNG)
 
-### 3. PHPMyAdmin Login
-Als Benutzer wird **testuser** genommen
+### 3. PHPMyAdmin Login  
+- Es wurde der Benutzer **testuser** definiert (im Skript) und
 
-Das Passwort ist **test312**
+- Das Passwort lautet **test312**
 
-Die Anmeldung erflogt beim drücken der Enter-taste
-
-Das Fenster sieht jetzt so aus:
+- Nach erfolgreichem Anmelden, sieht man nun das PHPmyAdmin Webinterface.  
 
 ![AdminWeb](AdminWeb.PNG)
 
 ### 4. Los arbeiten mit PHPMyAmdin 
 
-AB jetzt kann mit PHPMyAdmin gearbeitet werden. Es können Datenbanken erstellt und administriert werden.
+Ab sofort ist es möglich mit PHPmyAdmin zu arbeiten und Datenbanken zu erstellen oder zu administrieren.  
 
-Wenn benötigt können neue Benutzer angelegt werden.
+Falls gewünscht, können natürlich auch weitere Benutzer angelegt werden.  
 
 Offizielle PHPMyAdmin [Website][ophp]
 
@@ -120,23 +117,17 @@ Offizielle MySQL [Website][osql]
 
 ### 5. Zugriff auf Wordpress 
 
-- Um auf Wordpress zuzugreifen, muss ein Browser geöffnet werden.
+- Wie mit PHPmyAdmin, muss man bei Wordpress auch einen Browser auf der Host-Maschine öffnen und den Link: http://localhost:8081 (8081 Wichtig!) eingeben.  
 
-- Es wird die URL http://localhost:8081 eigegeben
+# Testing
 
-Nun sieht das Fenster so aus:
-![Wordpress](Images/wordpress.png)
-
-Jetzt kann die Sprache ausgewählt werden. Anschliessend wird die erste Seite erstellt.
-
-#Testing
-
-Das Testing wir mit einem Testing Protokoll durchgeführt. Dabei wird er SOLL / IST Zustand Verglichen und erläutert wie getestet wurde.
+Das Testing wir mit einem Testing Protokoll durchgeführt. 
+Dabei wird der SOLL / IST Zustand Verglichen und erläutert wie er getestet wurde.
 
 | SOLL-Zustand                                                             |                                      IST-Zustand                                      |                                                                                                            Test |
 | :----------------------------------------------------------------------- | :-----------------------------------------------------------------------------------: | --------------------------------------------------------------------------------------------------------------: |
-| 3 Container wurden per Befehl installiert                                |                 Die 3 Container wurden erstellt und werden ausgeführt                 | In Powershell wurde der Befehl docker-compose -f "C:\myrep\my_M300\Docker\LB2\docker-compose.yml" up -d --build |
-| Das Netzwerk "Net1" wurde erstellt                                       |             Das Netzwerk wurde während dem Ausführen des Befehls erstellt             |                                        Mit dem Befehl: Docker Network ls werden alle Docker Netzwerke angezeigt |
-| Die Portverlinkung von PHPMyAdmin von Port 80 auf 8080 ist gewährleistet | Mit http://localhost:8080 kann auf das Webinterface von PHPMyAdmin zugegriffen werden |                                                             Im Browser die Adresse http://localhost:8080 öffnen |
-| Mit dem Gesetzten User Login kann man sich anmelden                      |           Mit dem Benutzername User und Passwort test312 kann eingelogt werden           |                                            In der Anmeldemaske von PHPMyAdmin werden die Login Daten eingegeben |
-| Die Portverlinkung von Wordpress von Port 80 auf 8081 ist gewährleistet | Mit http://localhost:8081 kann auf Wordpress zugegriffen werden |                                                             Im Browser die Adresse http://localhost:8081 öffnen |
+| 3 Container werden per Befehl installiert.                               |                 Die 3 Container wurden erstellt und werden ausgeführt.                | In Powershell wurde der Befehl docker-compose -f "C:\myrep\my_M300\Docker\LB2\docker-compose.yml" up -d --build angewendet. |
+| Das Netzwerk "Net1" wird erstellt.                                       |             Das Netzwerk wird während dem Ausführen des Befehls erstellt.            |                                        Mit dem Befehl: Docker Network ls werden alle Docker Netzwerke angezeigt. |
+| Die Portverlinkung von PHPMyAdmin, Port 80 auf 8080, ist gewährleistet. | Mit http://localhost:8080 kann auf das Webinterface von PHPMyAdmin zugegriffen werden. |                                                             Im Browser die Adresse http://localhost:8080 öffnen. |
+| Mit dem Gesetzten User Login kann man sich anmelden.                     |           Mit dem Benutzername testuser und Passwort test312 kann man sich eingen.           |                                            In der Anmeldemaske von PHPMyAdmin werden die Login Daten getestet. |
+| Die Portverlinkung von Wordpress von Port 80 auf 8081 ist gewährleistet. | Mit http://localhost:8081 kann auf Wordpress zugegriffen werden. |                                                             Im Browser die Adresse http://localhost:8081 öffnen. |
