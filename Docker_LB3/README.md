@@ -25,7 +25,7 @@ Dank **PHPmyAdmin** kann amn die Datenbank sehr leicht mit dem Webinterface admi
 
 Durch die Verlinkung von **MySQL** -> **PHPmyAdmin** und **MySQL** -> **Wordpress** wird dies möglich gemacht.
 
-![GUI](Images/GUI.PNG)
+![PHPmyAdmin](PHPmyAdmin.PNG)
 
 #Technische Angaben
 
