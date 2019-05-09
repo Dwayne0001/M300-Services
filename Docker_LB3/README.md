@@ -171,6 +171,3 @@ Im Laufe dieser LB habe ich sehr viel neues dazu gelernt! Z.B was Docker und Con
 # Reflexion zur LB3  
 
 Diese LB war ziemlich schwierig für mich da so ziemlich alles neu für mich war. Ich musste sehr viel Recherchieren und mit Schulkollegen ausstudieren. Ich kannte mich zwar mit VMs aus, jedoch ging es bei der LB3 nicht um VMs sondern Container was wieder etwas komplett neues für mich war. Des Weiteren kamm auch noch Docker-Compose dazu, welches ich z.B. auch am Anfang null verstanden habe. 
-
-
-
