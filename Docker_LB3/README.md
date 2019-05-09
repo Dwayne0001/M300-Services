@@ -8,6 +8,7 @@
 - [Technische Angaben](#technische-angaben)
   - [Netzwerkplan](#netzwerkplan)
   - [Code](#code)
+  - [Befehle](#befehle)
   - [Anleitung für den Betrieb](#anleitung-f%C3%BCr-den-betrieb)
 - [Testing](#kapitel-3-testing)
 - [Vergleich Vorwissen und Wissenzuwachs](#vergleich)
@@ -78,6 +79,34 @@ Hier der Code des Docker Compose Files:
 **Auf der Zeile 49-50** wird das Netzwerk erstellt
 
 Das File ist in meinem Repository abgelegt.  
+
+## Code  
+
+**Docker**  
+
+| Befehl         | Beschreibung                                    |
+| -------------- | ----------------------------------------------- |
+| `docker run`   | Führt einen Befehl in einem neuen Container aus |
+| `docker start` | Startet einen oder mehrere Container            |
+| `docker stop`  | Stoppt einen oder mehrere Container             |
+| `docker build` | Baut eine Image aus dem Dockerfile              |
+| `docker pull`  | Lädt Image aus einer Repository herunter        |
+| `docker push`  | Lädt Image in eine Repository hoch              |
+
+**Docker-Compose**  
+
+| Befehl                   | Beschreibung                               |
+| ------------------------ | ------------------------------------------ |
+| `docker-compose build`   | Baut Service auf                           |
+| `docker-compose up`      | Erstellt und startet Container             |
+| `docker-compose down`    | Stoppt und entfernt Container, inkl. Daten |
+| `docker-compose events`  | Real-Time Logs                             |
+| `docker-compose kill`    | "Killt" Container (erzwingt Stop)          |
+| `docker-compose pause`   | Pausiert Service                           |
+| `docker-compose restart` | Startet Service neu                        |
+| `docker-compose start`   | Startet Container                          |
+| `docker-compose stop`    | Stoppt Container                           |
+
 
 ## Anleitung für den Betrieb
 
