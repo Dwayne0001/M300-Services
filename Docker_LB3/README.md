@@ -213,3 +213,24 @@ Im Laufe dieser LB habe ich sehr viel neues dazu gelernt! Z.B was Docker und Con
 # Reflexion zur LB3  
 
 Diese LB war ziemlich schwierig für mich da so ziemlich alles neu für mich war. Ich musste sehr viel Recherchieren und mit Schulkollegen ausstudieren. Ich kannte mich zwar mit VMs aus, jedoch ging es bei der LB3 nicht um VMs sondern Container was wieder etwas komplett neues für mich war. Des Weiteren kamm auch noch Docker-Compose dazu, welches ich z.B. auch am Anfang null verstanden habe. 
+
+# Kubernetes
+Zuerst musste ich einen Namespace erstellen
+
+    kubectl create namespace dwa
+
+Danach habe ich denn Service erstellt
+    
+    kubectl run apache --image=httpd --restart=Never --namespace dwa
+
+Anschliessend habe ich die YAML Datei mit dem Ergebniss erzeugt
+
+    kubectl get service apache -o yaml --namespace dwa
+
+Zusätzlich musste ich noch den richitgen Port öffnen
+
+    kubectl expose pod/apache --type="LoadBalancer" --port 80 --namespace dwa
+
+Schlussendlich konnte man kontrollieren, ob der Service auch erstellt wurde
+
+    kubectl get service apache -o yaml --namespace dwa
