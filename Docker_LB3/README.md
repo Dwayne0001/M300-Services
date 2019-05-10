@@ -12,8 +12,9 @@
   - [Anleitung für den Betrieb](#anleitung-f%C3%BCr-den-betrieb)
 - [Testing](#kapitel-3-testing)
 - [Vergleich Vorwissen und Wissenzuwachs](#vergleich)
-- [Reflexion zur LB3](#reflexion-zur-lb3)
 - [Kubernetes](#kubernetes)
+- [Reflexion zur LB3](#reflexion-zur-lb3)
+
 
   
 
@@ -211,10 +212,6 @@ Dabei wird der SOLL / IST Zustand Verglichen und erläutert wie er getestet wurd
 Am Anfang der LB3 hatte ich so gut wie keine Ahnung von Docker, Container etc. Ich hatte zwar eine leichte Ahnung was Docker ist, aber ich hatte nie wirklich was damit zu tun; Die Applikationsentwicklung in unserer Firma verwendet es z.B.  
 Im Laufe dieser LB habe ich sehr viel neues dazu gelernt! Z.B was Docker und Container sind, wie sie funktioniere und zusammenspielen. Mit Hilfe von Docker-Compose können z.B mehrere Container gleichzeitig erstellt werden; diese Container können auch untereinander kommunizieren. Die Datei dazu heisst docker-compose.yml; in dieser Datei werden div. Sachen (z.B. Services. Volumes und Netzwerke) definiert.  
 
-# Reflexion zur LB3  
-
-Diese LB war ziemlich schwierig für mich da so ziemlich alles neu für mich war. Ich musste sehr viel Recherchieren und mit Schulkollegen ausstudieren. Ich kannte mich zwar mit VMs aus, jedoch ging es bei der LB3 nicht um VMs sondern Container was wieder etwas komplett neues für mich war. Des Weiteren kamm auch noch Docker-Compose dazu, welches ich z.B. auch am Anfang null verstanden habe. 
-
 # Kubernetes
 Zuerst musste ich einen Namespace erstellen
 
@@ -235,3 +232,9 @@ Zusätzlich musste ich noch den richitgen Port öffnen
 Schlussendlich konnte man kontrollieren, ob der Service auch erstellt wurde
 
     kubectl get service apache -o yaml --namespace dwa
+
+# Reflexion zur LB3  
+
+Diese LB war ziemlich schwierig für mich da so ziemlich alles neu für mich war. Ich musste sehr viel Recherchieren und mit Schulkollegen ausstudieren. Ich kannte mich zwar mit VMs aus, jedoch ging es bei der LB3 nicht um VMs sondern Container was wieder etwas komplett neues für mich war. Des Weiteren kamm auch noch Docker-Compose dazu, welches ich z.B. auch am Anfang null verstanden habe. 
+
+
